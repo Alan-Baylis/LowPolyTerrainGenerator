@@ -33,13 +33,13 @@ public class TerrainGenerator : MonoBehaviour {
         {
             if (x < width)
             {
-            Grid[i] = new Vector3(x*triangleScale, (int)GenerateHeight(x,z), z* triangleScale);
+            Grid[i] = new Vector3(x*triangleScale, GenerateHeight(x,z), z* triangleScale);
             x++;
 
             }
             else
             {
-                Grid[i] = new Vector3(x* triangleScale, (int)GenerateHeight(x, z), z* triangleScale);
+                Grid[i] = new Vector3(x* triangleScale, GenerateHeight(x, z), z* triangleScale);
                 x = 1;
                 z++;
             }
